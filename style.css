@@ -395,12 +395,6 @@ p{ color: var(--text-dim); max-width: 68ch; }
 .tree__branch{ color: var(--text-faint); }
 .tree__name{ color: var(--text); font-weight: 600; }
 .tree__desc{ color: var(--text-dim); line-height: 1.5; }
-.edu{
-  font-family: var(--mono);
-  font-size: 0.8rem;
-  color: var(--text-faint);
-}
-
 /* ---------- contact ---------- */
 .contact-panel{ margin-bottom: 30px; }
 .fields{ margin: 0; }

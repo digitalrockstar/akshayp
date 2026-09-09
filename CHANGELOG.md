@@ -16,3 +16,4 @@ next steps, see CONTEXT.md instead — this file only records completed work.
 - Widened main content column from 980px to 1200px max-width to reduce dead space on wide screens
 - Fixed uneven project card column widths caused by long unbreakable titles (e.g. enterprise_data_platform/) forcing their CSS Grid column wider than the others
 - Added a terminal-style SVG favicon (assets/favicon.svg), replacing the blank placeholder icon
+- Promoted education from a faint trailing line in the skills section to its own full section with sidebar/mobile nav entries and normal panel styling

@@ -26,7 +26,7 @@
 ## State (as of 2026-09-09)
 - Branch: master
 - Last commit: pending push, this session
-- Status: 3 fixes — (1) terminal box now width:100% with no cap at all (was still 640px-capped above 1080px, leaving visible dead space on wide desktop); (2) main content column widened 980px→1200px to reduce blank space on wide screens; (3) project cards had uneven column widths from long unbreakable titles (enterprise_data_platform/ etc) forcing grid track size — fixed with min-width:0 + overflow-wrap; (4) added terminal-style SVG favicon
+- Status: education was a single faint trailing line inside the skills section, not tracked by sidebar scroll-spy. Promoted to its own full section ("$ cat education.txt") with sidebar/mobile nav entries, reusing existing .field/.panel styling — no new CSS needed, scroll-spy JS is fully dynamic so it picked it up automatically
 - Next: no open work — awaiting next task
 - Blocked on: nothing
 
@@ -41,3 +41,5 @@
 - #terminalBody uses white-space:pre-wrap — any HTML-source indentation/newlines left inside that div render as visible whitespace. typeLines() clears it via innerHTML="" before appending; if editing that markup, keep the clear or re-flatten the div to a single line
 - .card has min-width:0 and .card__title has overflow-wrap:break-word — needed because CSS Grid's 1fr columns still size to the largest unbreakable content per column by default; long slash-suffixed project titles (enterprise_data_platform/) were forcing their column wider than the other two. Keep these rules if adding more project cards with long identifier-style titles.
 - main max-width is 1200px (was 980px) — intentional widening for better desktop space usage, not a typo
+- Sidebar/mobile nav are driven entirely by data-target attrs matched against section ids in script.js — adding a new section just needs a matching <li>/<a> pair in both .pipeline__nodes and .mobilebar, no JS changes needed
+- Education is its own section (#education, "$ cat education.txt") between skills and contact, using the existing .field/.panel pattern (same as contact) — not a standalone .edu paragraph anymore
