@@ -73,6 +73,10 @@ main{
 
 .lede{ color: var(--text); font-size: 1.08rem; margin-top: 0; }
 p{ color: var(--text-dim); max-width: 68ch; }
+/* Panel paragraphs (About section) fill the panel's own width instead of
+   wrapping at a fixed ch-count well short of the box border — the panel
+   itself is already width-bounded by main's max-width: 1200px. */
+.panel .lede, .panel p{ max-width: none; }
 
 .stack-row{ display:flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
 .stack-row span{
