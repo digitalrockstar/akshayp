@@ -20,3 +20,4 @@ next steps, see CONTEXT.md instead — this file only records completed work.
 - Promoted education from a faint trailing line in the skills section to its own full section with sidebar/mobile nav entries and normal panel styling
 - Added GPA to education entries: Symbiosis 3.37, Nirma 8.01
 - Added content-editability system: /content/*.md,*.csv files + build.js (vanilla Node, no deps) assemble index.html and script.js from marked regions; README/CONTEXT.md updated for the new `node build.js` build step
+- Fixed role/title copy in browser tab (global.role → <title>); regenerated index.html after a content-only commit had missed the build step
