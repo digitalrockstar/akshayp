@@ -7,7 +7,7 @@
   /* BUILD:bootlines */
   var bootLines = [
     { type: "prompt", text: "$ whoami" },
-    { type: "out", text: "akshay patel — director of analytics, data, bi & ai" },
+    { type: "out", text: "akshay patel — head of analytics (BI using AI), technology & IT" },
     { type: "gap" },
     { type: "prompt", text: "$ status" },
     { type: "out", text: "available   : immediately" },
@@ -15,7 +15,7 @@
     { type: "out", text: "open_to     : roles in blr, pune, uae & europe" },
     { type: "gap" },
     { type: "prompt", text: "$ cat mission.txt" },
-    { type: "out", text: "build data platforms and ai systems that help\nbusinesses decide faster." },
+    { type: "out", text: "build data platforms and ai systems that help businesses decide faster." },
   ];
   /* /BUILD:bootlines */
 
