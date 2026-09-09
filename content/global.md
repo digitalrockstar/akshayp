@@ -1,5 +1,5 @@
 name: Akshay Patel
-role: Director of Analytics, Data, BI & AI
+role: Head of Analytics (BI using AI), Technology & IT
 location: Bengaluru, India
 open_to: roles in BLR, Pune, UAE & Europe
 status: immediately available
