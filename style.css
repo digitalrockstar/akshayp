@@ -47,7 +47,7 @@ code, .cmd, .mono{ font-family: var(--mono); }
 main{
   margin-left: var(--nav-w);
   padding: 0 56px 40px 56px;
-  max-width: 980px;
+  max-width: 1200px;
 }
 
 .section{
@@ -188,7 +188,6 @@ p{ color: var(--text-dim); max-width: 68ch; }
   background: var(--bg-raise);
   border: 1px solid var(--panel-border);
   width: 100%;
-  max-width: 640px;
   margin-bottom: 44px;
 }
 .terminal__bar{
@@ -350,12 +349,15 @@ p{ color: var(--text-dim); max-width: 68ch; }
   padding: 22px;
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 .card__title{
   font-family: var(--mono);
   color: var(--accent);
   font-weight: 600;
   margin-bottom: 10px;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 .card__desc{ font-size: 0.9rem; margin: 0 0 12px 0; color: var(--text-dim); }
 .card__impact{
@@ -429,7 +431,6 @@ p{ color: var(--text-dim); max-width: 68ch; }
 @media (max-width: 1080px){
   .grid--kpi{ grid-template-columns: repeat(2, 1fr); }
   .grid--projects{ grid-template-columns: repeat(2, 1fr); }
-  .terminal{ max-width: 100%; }
 }
 
 @media (max-width: 900px){

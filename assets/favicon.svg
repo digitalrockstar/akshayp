@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect x="1" y="1" width="30" height="30" rx="5" fill="#0F1815" stroke="#223129" stroke-width="1.5"/>
+  <rect x="1" y="1" width="30" height="8" rx="5" fill="#121C19"/>
+  <rect x="1" y="5" width="30" height="4" fill="#121C19"/>
+  <circle cx="6.5" cy="5" r="1.4" fill="#5f4444"/>
+  <circle cx="11" cy="5" r="1.4" fill="#6b5c3a"/>
+  <circle cx="15.5" cy="5" r="1.4" fill="#3f5c47"/>
+  <text x="5" y="24" font-family="'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="600" fill="#FFB020">&gt;</text>
+  <rect x="14" y="17.5" width="7" height="3" fill="#4FD1C0"/>
+</svg>

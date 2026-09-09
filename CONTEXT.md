@@ -26,7 +26,7 @@
 ## State (as of 2026-09-09)
 - Branch: master
 - Last commit: pending push, this session
-- Status: fixed "$ whoami" appearing indented — leftover HTML-source whitespace text node was being preserved by white-space:pre-wrap; typeLines() now clears terminal body before typing
+- Status: 3 fixes — (1) terminal box now width:100% with no cap at all (was still 640px-capped above 1080px, leaving visible dead space on wide desktop); (2) main content column widened 980px→1200px to reduce blank space on wide screens; (3) project cards had uneven column widths from long unbreakable titles (enterprise_data_platform/ etc) forcing grid track size — fixed with min-width:0 + overflow-wrap; (4) added terminal-style SVG favicon
 - Next: no open work — awaiting next task
 - Blocked on: nothing
 
@@ -37,5 +37,7 @@
 - Deploy target is Render static site — publish dir is repo root, no build command
 - "open_to" / location-preference copy exists in TWO places: script.js (terminal boot line, ~line 14) and index.html (contact/status field, ~line 274). Update both together.
 - index.html line ~64 hero subhead also says "open to relocation" generically (no location named) — not yet reconciled with the BLR/Pune/UAE/Europe wording used elsewhere; flag to user if this should change too
-- .terminal has width:100% + max-width:640px, overridden to max-width:100% below 1080px (was previously hard-capped at 640px on all widths — caused visible gap on tablet/landscape viewports)
+- .terminal is width:100% with no max-width cap at all now — always fills its container on every screen size, by design (previous versions capped it at 640px, which looked like unused space on wide desktop)
 - #terminalBody uses white-space:pre-wrap — any HTML-source indentation/newlines left inside that div render as visible whitespace. typeLines() clears it via innerHTML="" before appending; if editing that markup, keep the clear or re-flatten the div to a single line
+- .card has min-width:0 and .card__title has overflow-wrap:break-word — needed because CSS Grid's 1fr columns still size to the largest unbreakable content per column by default; long slash-suffixed project titles (enterprise_data_platform/) were forcing their column wider than the other two. Keep these rules if adding more project cards with long identifier-style titles.
+- main max-width is 1200px (was 980px) — intentional widening for better desktop space usage, not a typo

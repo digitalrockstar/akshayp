@@ -12,3 +12,7 @@ next steps, see CONTEXT.md instead — this file only records completed work.
 - Fixed terminal box width: was hard-capped at 640px on all viewport sizes, causing a visible gap on tablet/landscape widths (~600-1080px). Now fills available width below 1080px.
 - Audited KPI grid, projects grid, skills tree, and contact fields across breakpoints — no other layout issues found
 - Fixed "$ whoami" rendering indented: HTML-source whitespace inside #terminalBody was preserved by white-space:pre-wrap and never cleared before the typing animation ran
+- Removed terminal box's remaining 640px width cap entirely — it now always fills its container, including on wide desktop screens
+- Widened main content column from 980px to 1200px max-width to reduce dead space on wide screens
+- Fixed uneven project card column widths caused by long unbreakable titles (e.g. enterprise_data_platform/) forcing their CSS Grid column wider than the others
+- Added a terminal-style SVG favicon (assets/favicon.svg), replacing the blank placeholder icon
