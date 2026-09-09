@@ -25,14 +25,15 @@
 
 ## State (as of 2026-09-09)
 - Branch: master
-- Last commit: regenerated index.html for a role-copy change (build step had been missed) — pushed
-- Status: title/tab text now shows updated role ("Head of Analytics (BI using AI), Technology & IT"); global.role currently only feeds <title>, not any visible on-page text
+- Last commit: fixed hero__headline max-width bug (16ch→26ch) + regenerated script.js for an unbuilt terminal.md edit — pushed
+- Status: headline was wrapping to 2 words/line at every screen size (pre-existing bug since initial commit, unrelated to content system, just noticed now); fixed
 - Next: nothing queued
 - Blocked on: nothing
 
 ## Known gotchas
-- CRITICAL: always run `node build.js` and commit the regenerated index.html/script.js together with any content/ change — a content-only commit leaves the deployed site unchanged (this happened once: content/global.md was edited+pushed without rebuilding, site showed no change until index.html was regenerated and pushed separately)
-- Confirm Render's Build Command is actually set to `node build.js` in the dashboard (not verified from this sandbox) — without it, Render just serves whatever index.html/script.js happen to be committed, so the local-rebuild discipline above is the only safety net either way
+- The missed-build-step issue has now recurred twice (global.md role change, terminal.md text change) — both times content/ was edited+pushed without running `node build.js` first, so the deployed site didn't reflect the edit until a follow-up rebuild+push. Get Render's Build Command set to `node build.js` to make this self-healing (still unverified from this sandbox) — until then, always run `node build.js` locally before every commit that touches content/
+- CRITICAL: always run `node build.js` and commit the regenerated index.html/script.js together with any content/ change
+- Confirm Render's Build Command is actually set to `node build.js` in the dashboard (not verified from this sandbox)
 - global.role (content/global.md) currently only feeds the <title> tag — no visible on-page text uses it; if visible role text should also change, that's in content/hero.md and/or global.meta_description, not global.role
 - Content lives in /content/*.md,*.csv; index.html/script.js have <!--BUILD:x-->/<!--/BUILD:x--> (or /* BUILD:x */) regions that are overwritten by `node build.js` — never hand-edit text inside those regions, edit /content/ and rebuild instead
 - global.md's `open_to` is the single source for the open-to-roles copy, referenced via {{global.open_to}} from hero.md/terminal.md — terminal line auto-lowercases it, no more manual 3-way sync needed

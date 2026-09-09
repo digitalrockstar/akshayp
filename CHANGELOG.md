@@ -21,3 +21,4 @@ next steps, see CONTEXT.md instead — this file only records completed work.
 - Added GPA to education entries: Symbiosis 3.37, Nirma 8.01
 - Added content-editability system: /content/*.md,*.csv files + build.js (vanilla Node, no deps) assemble index.html and script.js from marked regions; README/CONTEXT.md updated for the new `node build.js` build step
 - Fixed role/title copy in browser tab (global.role → <title>); regenerated index.html after a content-only commit had missed the build step
+- Fixed hero headline wrapping to ~2 words/line at every screen size: .hero__headline max-width was 16ch since the initial commit, widened to 26ch
