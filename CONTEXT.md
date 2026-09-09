@@ -26,7 +26,7 @@
 ## State (as of 2026-09-09)
 - Branch: master
 - Last commit: pending push, this session
-- Status: relocation copy now consistent — hero terminal boot line (script.js) and footer status line both read "roles in BLR, Pune, UAE & Europe"
+- Status: terminal box was hard-capped at 640px with no responsive override, causing visible gap on tablet/landscape widths (~600-1080px). Fixed: now fills available width below 1080px, still caps at 640px on wide desktop.
 - Next: no open work — awaiting next task
 - Blocked on: nothing
 
@@ -37,3 +37,4 @@
 - Deploy target is Render static site — publish dir is repo root, no build command
 - "open_to" / location-preference copy exists in TWO places: script.js (terminal boot line, ~line 14) and index.html (contact/status field, ~line 274). Update both together.
 - index.html line ~64 hero subhead also says "open to relocation" generically (no location named) — not yet reconciled with the BLR/Pune/UAE/Europe wording used elsewhere; flag to user if this should change too
+- .terminal has width:100% + max-width:640px, overridden to max-width:100% below 1080px (was previously hard-capped at 640px on all widths — caused visible gap on tablet/landscape viewports)

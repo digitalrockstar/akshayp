@@ -187,6 +187,7 @@ p{ color: var(--text-dim); max-width: 68ch; }
 .terminal{
   background: var(--bg-raise);
   border: 1px solid var(--panel-border);
+  width: 100%;
   max-width: 640px;
   margin-bottom: 44px;
 }
@@ -428,6 +429,7 @@ p{ color: var(--text-dim); max-width: 68ch; }
 @media (max-width: 1080px){
   .grid--kpi{ grid-template-columns: repeat(2, 1fr); }
   .grid--projects{ grid-template-columns: repeat(2, 1fr); }
+  .terminal{ max-width: 100%; }
 }
 
 @media (max-width: 900px){
