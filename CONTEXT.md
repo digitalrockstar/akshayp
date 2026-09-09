@@ -25,15 +25,14 @@
 
 ## State (as of 2026-09-09)
 - Branch: master
-- Last commit: fixed hero__headline max-width bug (16ch→26ch) + regenerated script.js for an unbuilt terminal.md edit — pushed
-- Status: headline was wrapping to 2 words/line at every screen size (pre-existing bug since initial commit, unrelated to content system, just noticed now); fixed
+- Last commit: fixed About section paragraph width (was wrapping ~500px short of panel's right edge on wide/landscape screens) — pushed
+- Status: two separate width-cap bugs found and fixed today — hero__headline (16ch, fixed font-size-relative) and .panel p (68ch, fixed ch-width vs a much wider panel box). Worth a broader pass checking other fixed-width/ch caps against actual rendered container widths if more "text doesn't fill its box" reports come in
 - Next: nothing queued
 - Blocked on: nothing
 
 ## Known gotchas
-- The missed-build-step issue has now recurred twice (global.md role change, terminal.md text change) — both times content/ was edited+pushed without running `node build.js` first, so the deployed site didn't reflect the edit until a follow-up rebuild+push. Get Render's Build Command set to `node build.js` to make this self-healing (still unverified from this sandbox) — until then, always run `node build.js` locally before every commit that touches content/
-- CRITICAL: always run `node build.js` and commit the regenerated index.html/script.js together with any content/ change
-- Confirm Render's Build Command is actually set to `node build.js` in the dashboard (not verified from this sandbox)
+- Generic p{max-width:68ch} is still in effect site-wide except inside .panel (overridden to max-width:none there) — if a new <p> is added somewhere with a much wider container than 68ch (~580px), check whether it needs the same panel-style override
+- The missed-build-step issue has recurred twice (global.md role change, terminal.md text change) — both times content/ was edited+pushed without running `node build.js` first, so the deployed site didn't reflect the edit until a follow-up rebuild+push. Get Render's Build Command set to `node build.js` to make this self-healing (still unverified from this sandbox) — until then, always run `node build.js` locally before every commit that touches content/
 - global.role (content/global.md) currently only feeds the <title> tag — no visible on-page text uses it; if visible role text should also change, that's in content/hero.md and/or global.meta_description, not global.role
 - Content lives in /content/*.md,*.csv; index.html/script.js have <!--BUILD:x-->/<!--/BUILD:x--> (or /* BUILD:x */) regions that are overwritten by `node build.js` — never hand-edit text inside those regions, edit /content/ and rebuild instead
 - global.md's `open_to` is the single source for the open-to-roles copy, referenced via {{global.open_to}} from hero.md/terminal.md — terminal line auto-lowercases it, no more manual 3-way sync needed
