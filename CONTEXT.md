@@ -26,7 +26,7 @@
 ## State (as of 2026-09-09)
 - Branch: master
 - Last commit: pending push, this session
-- Status: contact/status line updated — "open to relocation (Amsterdam/Europe)" replaced with "open to roles in BLR, Pune, UAE & Europe"
+- Status: relocation copy now consistent — hero terminal boot line (script.js) and footer status line both read "roles in BLR, Pune, UAE & Europe"
 - Next: no open work — awaiting next task
 - Blocked on: nothing
 
@@ -35,3 +35,5 @@
 - All text content lives in index.html directly, not in data files
 - KPI numbers driven by data-num/data-prefix/data-suffix attrs, animated by script.js on scroll
 - Deploy target is Render static site — publish dir is repo root, no build command
+- "open_to" / location-preference copy exists in TWO places: script.js (terminal boot line, ~line 14) and index.html (contact/status field, ~line 274). Update both together.
+- index.html line ~64 hero subhead also says "open to relocation" generically (no location named) — not yet reconciled with the BLR/Pune/UAE/Europe wording used elsewhere; flag to user if this should change too

@@ -8,3 +8,4 @@ next steps, see CONTEXT.md instead — this file only records completed work.
 - Added CONTEXT.md, CHANGELOG.md, SKILL.md for cross-session continuity
 - Replaced "open to relocation (Amsterdam / Europe)" with "open to roles in BLR, Pune, UAE & Europe" in site footer
 - Added standing constraint: never include relocation info in CV PDF
+- Updated terminal boot line in script.js to match footer: "roles in BLR, Pune, UAE & Europe"
