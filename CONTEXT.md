@@ -26,7 +26,7 @@
 ## State (as of 2026-09-09)
 - Branch: master
 - Last commit: pending push, this session
-- Status: terminal box was hard-capped at 640px with no responsive override, causing visible gap on tablet/landscape widths (~600-1080px). Fixed: now fills available width below 1080px, still caps at 640px on wide desktop.
+- Status: fixed "$ whoami" appearing indented — leftover HTML-source whitespace text node was being preserved by white-space:pre-wrap; typeLines() now clears terminal body before typing
 - Next: no open work — awaiting next task
 - Blocked on: nothing
 
@@ -38,3 +38,4 @@
 - "open_to" / location-preference copy exists in TWO places: script.js (terminal boot line, ~line 14) and index.html (contact/status field, ~line 274). Update both together.
 - index.html line ~64 hero subhead also says "open to relocation" generically (no location named) — not yet reconciled with the BLR/Pune/UAE/Europe wording used elsewhere; flag to user if this should change too
 - .terminal has width:100% + max-width:640px, overridden to max-width:100% below 1080px (was previously hard-capped at 640px on all widths — caused visible gap on tablet/landscape viewports)
+- #terminalBody uses white-space:pre-wrap — any HTML-source indentation/newlines left inside that div render as visible whitespace. typeLines() clears it via innerHTML="" before appending; if editing that markup, keep the clear or re-flatten the div to a single line

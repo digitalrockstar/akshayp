@@ -30,6 +30,7 @@
   }
 
   function typeLines() {
+    body.innerHTML = "";
     var flat = [];
     bootLines.forEach(function (l) {
       if (l.type === "gap") { flat.push({ type: "gap" }); return; }
