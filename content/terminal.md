@@ -1,5 +1,5 @@
 prompt: $ whoami
-out: akshay patel — director of analytics, data, bi & ai
+out: akshay patel — head of analytics (BI using AI), technology & IT
 gap
 prompt: $ status
 out: available   : immediately
