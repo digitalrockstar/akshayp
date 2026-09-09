@@ -20,10 +20,13 @@
 > 7. Never put secrets, tokens, or credentials in this file — it's
 >    committed to git history and readable by anyone with repo access.
 
+## Standing constraints (never prune — only remove if explicitly reversed)
+- Do NOT include relocation preference/location info in the CV PDF (assets/Akshay_Patel_Resume.pdf), ever, unless explicitly told otherwise in a future task.
+
 ## State (as of 2026-09-09)
 - Branch: master
-- Last commit: 6f0134d "Initial commit: terminal-themed portfolio site"
-- Status: single-page portfolio site complete — html/css/js/resume PDF all in place
+- Last commit: pending push, this session
+- Status: contact/status line updated — "open to relocation (Amsterdam/Europe)" replaced with "open to roles in BLR, Pune, UAE & Europe"
 - Next: no open work — awaiting next task
 - Blocked on: nothing
 

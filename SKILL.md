@@ -63,6 +63,21 @@ one sub-task stale.
 3. Commit CONTEXT.md alongside the actual code change, not as a separate
    commit — keeps history clean and avoids drift.
 
+## Standing constraints vs. in-flight state
+
+CONTEXT.md's "Standing constraints" section (if present) holds durable
+project rules — things that must hold true across every future session
+regardless of what task is active (e.g. "never put X in file Y unless
+explicitly told otherwise"). Unlike "State," this section is NOT pruned
+or overwritten between sessions — only edited if the user explicitly
+reverses a rule. Always check this section before doing any work, not
+just "State" — a standing constraint can silently make an otherwise
+reasonable-looking change wrong. If the user gives an instruction that
+sounds like a durable rule rather than a one-off task ("never do X",
+"always do Y going forward", "don't include Z until I say so"), add it
+here rather than to personal/account memory — memory doesn't travel
+across accounts or org members, and a repo-level rule needs to.
+
 ## Hard rules
 
 - Push cadence is per sub-task, not per session. A "sub-task" is any
