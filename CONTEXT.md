@@ -25,9 +25,9 @@
 
 ## State (as of 2026-09-09)
 - Branch: master
-- Last commit: fixed About section paragraph width (was wrapping ~500px short of panel's right edge on wide/landscape screens) — pushed
-- Status: two separate width-cap bugs found and fixed today — hero__headline (16ch, fixed font-size-relative) and .panel p (68ch, fixed ch-width vs a much wider panel box). Worth a broader pass checking other fixed-width/ch caps against actual rendered container widths if more "text doesn't fill its box" reports come in
-- Next: nothing queued
+- Last commit: pending push, this session
+- Status: hero headline/sub were still wrapping far short of the terminal's width above them even after the earlier 26ch fix (user screenshot showed it). Removed headline's max-width entirely, widened sub 62ch→90ch. Ran `node build.js` first — confirmed content/ and generated files were in sync (no missed-build drift this time).
+- Next: nothing queued — content-editability system (content/*.md,*.csv + build.js) is live; user's original "edit inline or import from git" ask is resolved
 - Blocked on: nothing
 
 ## Known gotchas
