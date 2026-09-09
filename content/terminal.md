@@ -7,4 +7,4 @@ out: based_in    : bengaluru, india
 out: open_to     : {{global.open_to_lower}}
 gap
 prompt: $ cat mission.txt
-out: build data platforms and ai systems that help\nbusinesses decide faster.
+out: build data platforms and ai systems that help businesses decide faster.
