@@ -25,14 +25,16 @@
 
 ## State (as of 2026-09-09)
 - Branch: master
-- Last commit: content-editability system (build.js + /content/*.md,csv), pending push this session
-- Status: content-editability system built and verified (idempotent rebuild, marker balance, spot-checked output) — index.html/script.js now generated from /content via `node build.js`
+- Last commit: regenerated index.html for a role-copy change (build step had been missed) — pushed
+- Status: title/tab text now shows updated role ("Head of Analytics (BI using AI), Technology & IT"); global.role currently only feeds <title>, not any visible on-page text
 - Next: nothing queued
 - Blocked on: nothing
 
 ## Known gotchas
+- CRITICAL: always run `node build.js` and commit the regenerated index.html/script.js together with any content/ change — a content-only commit leaves the deployed site unchanged (this happened once: content/global.md was edited+pushed without rebuilding, site showed no change until index.html was regenerated and pushed separately)
+- Confirm Render's Build Command is actually set to `node build.js` in the dashboard (not verified from this sandbox) — without it, Render just serves whatever index.html/script.js happen to be committed, so the local-rebuild discipline above is the only safety net either way
+- global.role (content/global.md) currently only feeds the <title> tag — no visible on-page text uses it; if visible role text should also change, that's in content/hero.md and/or global.meta_description, not global.role
 - Content lives in /content/*.md,*.csv; index.html/script.js have <!--BUILD:x-->/<!--/BUILD:x--> (or /* BUILD:x */) regions that are overwritten by `node build.js` — never hand-edit text inside those regions, edit /content/ and rebuild instead
-- Deploy target is Render static site — Build Command must be `node build.js`, Publish Directory `.` (README updated; Render dashboard itself not verified — confirm the build command is actually set there)
 - global.md's `open_to` is the single source for the open-to-roles copy, referenced via {{global.open_to}} from hero.md/terminal.md — terminal line auto-lowercases it, no more manual 3-way sync needed
 - CSV field values are NOT trimmed by build.js (intentional — e.g. highlights.csv suffix " Cr" needs its leading space); don't "clean up" apparent whitespace in the CSV files
 - KPI numbers driven by data-num/data-prefix/data-suffix attrs (now generated from highlights.csv), animated by script.js on scroll
