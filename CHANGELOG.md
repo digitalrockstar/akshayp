@@ -4,6 +4,7 @@ Human-facing log of what shipped, newest first. For in-flight state and
 next steps, see CONTEXT.md instead — this file only records completed work.
 
 ## 2026-09-09
+- Reconciled hero subhead copy: was still generic "open to relocation", now matches footer/terminal wording exactly ("open to roles in BLR, Pune, UAE & Europe")
 - Initial commit: terminal-themed portfolio site (html, css, js, resume PDF)
 - Added CONTEXT.md, CHANGELOG.md, SKILL.md for cross-session continuity
 - Replaced "open to relocation (Amsterdam / Europe)" with "open to roles in BLR, Pune, UAE & Europe" in site footer

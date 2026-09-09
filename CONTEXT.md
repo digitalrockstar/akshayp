@@ -26,17 +26,16 @@
 ## State (as of 2026-09-09)
 - Branch: master
 - Last commit: pending push, this session
-- Status: added GPA to education section — Symbiosis 3.37, Nirma 8.01
-- Next: no open work — awaiting next task
+- Status: reconciled hero subhead copy with footer/terminal wording (was still saying generic "open to relocation")
+- Next: build content-editability system (md/csv content files + build-time HTML generation), per user request and prior cross-account discussion
 - Blocked on: nothing
 
 ## Known gotchas
-- No build step, no backend, no DB — pure static HTML/CSS/JS
+- No build step, no backend, no DB — pure static HTML/CSS/JS (about to change: build step being added for content assembly, see State)
 - All text content lives in index.html directly, not in data files
 - KPI numbers driven by data-num/data-prefix/data-suffix attrs, animated by script.js on scroll
-- Deploy target is Render static site — publish dir is repo root, no build command
-- "open_to" / location-preference copy exists in TWO places: script.js (terminal boot line, ~line 14) and index.html (contact/status field, ~line 274). Update both together.
-- index.html line ~64 hero subhead also says "open to relocation" generically (no location named) — not yet reconciled with the BLR/Pune/UAE/Europe wording used elsewhere; flag to user if this should change too
+- Deploy target is Render static site — publish dir is repo root, no build command yet (will need one once build step lands)
+- "open_to" / location-preference copy exists in THREE places: script.js (terminal boot line), index.html hero subhead, index.html contact/status field. All three now read "open to roles in BLR, Pune, UAE & Europe" — keep in sync until content system removes this duplication
 - .terminal is width:100% with no max-width cap at all now — always fills its container on every screen size, by design (previous versions capped it at 640px, which looked like unused space on wide desktop)
 - #terminalBody uses white-space:pre-wrap — any HTML-source indentation/newlines left inside that div render as visible whitespace. typeLines() clears it via innerHTML="" before appending; if editing that markup, keep the clear or re-flatten the div to a single line
 - .card has min-width:0 and .card__title has overflow-wrap:break-word — needed because CSS Grid's 1fr columns still size to the largest unbreakable content per column by default; long slash-suffixed project titles (enterprise_data_platform/) were forcing their column wider than the other two. Keep these rules if adding more project cards with long identifier-style titles.
