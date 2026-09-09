@@ -17,3 +17,4 @@ next steps, see CONTEXT.md instead — this file only records completed work.
 - Fixed uneven project card column widths caused by long unbreakable titles (e.g. enterprise_data_platform/) forcing their CSS Grid column wider than the others
 - Added a terminal-style SVG favicon (assets/favicon.svg), replacing the blank placeholder icon
 - Promoted education from a faint trailing line in the skills section to its own full section with sidebar/mobile nav entries and normal panel styling
+- Added GPA to education entries: Symbiosis 3.37, Nirma 8.01

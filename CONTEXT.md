@@ -26,7 +26,7 @@
 ## State (as of 2026-09-09)
 - Branch: master
 - Last commit: pending push, this session
-- Status: education was a single faint trailing line inside the skills section, not tracked by sidebar scroll-spy. Promoted to its own full section ("$ cat education.txt") with sidebar/mobile nav entries, reusing existing .field/.panel styling — no new CSS needed, scroll-spy JS is fully dynamic so it picked it up automatically
+- Status: added GPA to education section — Symbiosis 3.37, Nirma 8.01
 - Next: no open work — awaiting next task
 - Blocked on: nothing
 
