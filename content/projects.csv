@@ -1,0 +1,7 @@
+title,desc,impact,tags
+conversational_bi/,"Production BI copilot running on local LLMs (Ollama) so business users ask questions in plain English instead of waiting on an analyst.","40+ business users · sharp cut in analyst dependency · near-zero recurring cost",python|llms|ollama|sql
+kpi_alert_engine/,"Anomaly detection across margins, pricing, inventory and working capital, flagging outliers before they show up in a weekly review.",80% faster issue detection,python|anomaly detection|power bi
+enterprise_data_platform/,"Single source of truth built from SAP, OMS, POS, DMS and marketplace extracts into query-optimised flat tables, replacing ticket-driven reporting.","20+ systems unified · ~40 hrs/week saved",postgresql|airflow|sql
+product_profitability_analyser/,"SKU-level P&L tracking across pricing and inventory, used to rationalise the catalogue and cut wasted spend.",₹20L+ in quarterly savings,sql|power bi
+project_queen/,"Gender-prediction model built from browsing and purchase behaviour to close the gap in female customer representation.",grew traffic and revenue share from a targeted persona,python|adobe analytics
+seller_churn_prediction/,"Behavioural scoring model to flag marketplace sellers likely to go dormant, prioritised for re-engagement.","~400 sellers reactivated on a base of 6,000",python|sql|predictive modelling

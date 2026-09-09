@@ -4,6 +4,7 @@
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* ---------------- terminal boot typing ---------------- */
+  /* BUILD:bootlines */
   var bootLines = [
     { type: "prompt", text: "$ whoami" },
     { type: "out", text: "akshay patel — director of analytics, data, bi & ai" },
@@ -14,8 +15,9 @@
     { type: "out", text: "open_to     : roles in blr, pune, uae & europe" },
     { type: "gap" },
     { type: "prompt", text: "$ cat mission.txt" },
-    { type: "out", text: "build data platforms and ai systems that help\nbusinesses decide faster." }
+    { type: "out", text: "build data platforms and ai systems that help\nbusinesses decide faster." },
   ];
+  /* /BUILD:bootlines */
 
   var body = document.getElementById("terminalBody");
 

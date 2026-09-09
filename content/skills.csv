@@ -1,0 +1,6 @@
+name,desc
+data-modelling/,"warehousing, data lakes, data marts, query optimisation, MDM, single source of truth"
+modern-stack/,"SQL, Python, Snowflake, PostgreSQL, Apache Airflow, AWS, GCP, Azure"
+bi-reporting/,"Power BI (DAX, Fabric), Tableau, Qlik Sense, Looker Studio, executive dashboards"
+ai-ml/,"forecasting, churn & propensity models, recommendation systems, conversational BI"
+leadership/,"team building from scratch, hiring, executive stakeholder management, roadmaps"
