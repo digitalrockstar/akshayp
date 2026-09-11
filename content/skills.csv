@@ -1,6 +1,8 @@
 name,desc
 data-modelling/,"warehousing, data lakes, data marts, query optimisation, MDM, single source of truth"
+retail-systems/,"ERP (SAP B1), POS (Wondersoft), OMS (Uniware), DMS, Shopify, marketplace & quick-commerce integrations, platform migrations"
 modern-stack/,"SQL, Python, Snowflake, PostgreSQL, Apache Airflow, AWS, GCP, Azure"
 bi-reporting/,"Power BI (DAX, Fabric), Tableau, Qlik Sense, Looker Studio, executive dashboards"
+security-governance/,"data security, DPDP compliance, access controls, KPI governance, audit-ready reporting"
 ai-ml/,"forecasting, churn & propensity models, recommendation systems, conversational BI"
-leadership/,"team building from scratch, hiring, executive stakeholder management, roadmaps"
+leadership/,"team building from scratch, hiring, vendor management, executive stakeholder management, roadmaps"

@@ -26,11 +26,14 @@
 ## State (as of 2026-09-09)
 - Branch: master
 - Last commit: pending push, this session
-- Status: hero headline/sub were still wrapping far short of the terminal's width above them even after the earlier 26ch fix (user screenshot showed it). Removed headline's max-width entirely, widened sub 62ch→90ch. Ran `node build.js` first — confirmed content/ and generated files were in sync (no missed-build drift this time).
-- Next: nothing queued — content-editability system (content/*.md,*.csv + build.js) is live; user's original "edit inline or import from git" ask is resolved
-- Blocked on: nothing
+- Status: aligned portfolio content (about.md, experience.md Uppercase entry, skills.csv) to the Shuru "Head of Engineering" CV + cover letter — added ERP/POS/OMS/DMS ownership, DPDP/data-security compliance, Google Workspace→M365 migration, vendor mgmt, 17%/8% forecast/inventory numbers, retail-systems/ + security-governance/ skill categories. Ran `node build.js` before commit.
+- Note: a separate session on this account concurrently built its OWN parallel content-editability system (template.html/script.template.js + build.js, different file names) in the same window as this one — it was reset/discarded in favour of this repo's version (BUILD-marker-in-place approach) once discovered via failed push + fetch. No content was lost; the discarded attempt's only unique value (this CV-alignment content) was manually re-applied on top of this repo's actual structure.
+- Next: nothing queued
+- Blocked on: nothing — same Render Build Command caveat as below still applies
 
 ## Known gotchas
+- content/global.md `role` field left untouched during the Shuru-CV-alignment pass (still "Head of Analytics (BI using AI), Technology & IT") even though content/experience.md's Uppercase bullets were rewritten with that CV's fuller technology/infra framing — portfolio is general-purpose across applications, so the on-page headline was deliberately kept broader than one job's title. Flag to user if they'd rather the site headline match a specific application literally.
+- Multiple concurrent sessions on this repo have caused rejected pushes twice now (fetch-first) — always `git fetch` + inspect `git log HEAD..origin/master` before force-anything if a push is rejected; never assume you have the latest state
 - Generic p{max-width:68ch} is still in effect site-wide except inside .panel (overridden to max-width:none there) — if a new <p> is added somewhere with a much wider container than 68ch (~580px), check whether it needs the same panel-style override
 - The missed-build-step issue has recurred twice (global.md role change, terminal.md text change) — both times content/ was edited+pushed without running `node build.js` first, so the deployed site didn't reflect the edit until a follow-up rebuild+push. Get Render's Build Command set to `node build.js` to make this self-healing (still unverified from this sandbox) — until then, always run `node build.js` locally before every commit that touches content/
 - global.role (content/global.md) currently only feeds the <title> tag — no visible on-page text uses it; if visible role text should also change, that's in content/hero.md and/or global.meta_description, not global.role

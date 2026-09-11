@@ -2,11 +2,13 @@
 ### Head of Technology, Analytics & IT
 at: Uppercase (Acefour Accessories)
 sub: Bengaluru · D2C e-commerce · reported to CBO, COO, CFO · team of 4
-- Built the Analytics & BI function and full data stack from pre-revenue, integrating SAP, OMS, POS, DMS and marketplace systems into one source of truth across 20+ sources, cutting manual reporting by ~40 hrs/week.
-- Redesigned the data model into query-optimised flat tables so category, finance and marketing teams could self-serve instead of raising a ticket.
-- Built a product profitability analyser driving ₹20L+ in quarterly savings through SKU rationalisation.
-- Built marketing mix models across Amazon, Meta and Google, improving ROAS by 23% and adding ~₹3.5 Cr in incremental revenue.
-- Deployed Conversational BI on local LLMs (Ollama) at near-zero recurring cost, and an AI KPI alert engine cutting issue detection time by 80%.
+- Owned the complete technology stack from pre-revenue — ERP (SAP B1), POS (Wondersoft), OMS (Uniware), DMS, Shopify and 10+ marketplace and quick-commerce platforms — into one query-optimised data platform across 20+ sources, spanning 35+ retail stores and 40+ distributors.
+- Owned data security and DPDP compliance across the stack, including access controls, governance standards and audit-ready reporting.
+- Built inventory tracking and traceability on barcode-based workflows integrated with ERP/POS/DMS, cutting manual reporting by ~40 hrs/week — the same pattern used in RFID-based tracking.
+- Led build-vs-buy decisions and managed enterprise vendors (SAP, Shopify, Microsoft, Zoho); ran platform migrations including moving 100+ users from Google Workspace to Microsoft 365 (data migration, identity, access and security setup).
+- Built demand, inventory and production planning models, improving forecast accuracy by 17% month-on-month and cutting inventory costs by 8% year-on-year.
+- Built a product profitability analyser driving ₹20L+ in quarterly savings through SKU rationalisation, and marketing mix models across Amazon, Meta and Google that improved ROAS by 23% and added ~₹3.5 Cr in incremental revenue.
+- Deployed Conversational BI on local LLMs at near-zero recurring cost, and an AI KPI alert engine cutting issue detection time by 80% — delivering 10+ dashboards across 40+ KPIs directly to the CBO, COO and CFO.
 
 ## 2020–2022
 ### Analytics Lead
